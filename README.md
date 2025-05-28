@@ -2,7 +2,8 @@
 
 This repository allows you to run the inference part of MathWorks' "3-D Brain Tumor Segmentation Using Deep Learning" example entirely within MATLAB Online. No local MATLAB installation is required to try out the segmentation on a sample 3D brain scan.
 
-[![Run in MATLAB Online](https://img.shields.io/badge/Run%20in-MATLAB%20Online-orange?logo=MathWorks)](https://matlab.mathworks.com/open/github/v1?repo=<OWNER>/brain-tumor-segmentation-matlab-online&project=project/BrainTumorSegmentation.prj)
+[![Run in MATLAB Online](https://img.shields.io/badge/Run%20in-MATLAB%20Online-orange?logo=MathWorks)](https://matlab.mathworks.com/open/github/v1?repo=CuteLoop/BrainTumorDetection-Matlab&project=project/BrainTumorSegmentation.prj)
+
 
 ## Quick Start
 
