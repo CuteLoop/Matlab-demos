@@ -5,7 +5,7 @@ on:
   pull_request:
 
 jobs:
-  run_demo:
+  run-demo:
     name: Run Demo on MATLAB
     if: ${{ secrets.MATLAB_TOKEN != '' }}
     runs-on: ubuntu-latest
@@ -17,4 +17,12 @@ jobs:
         uses: mathworks-actions/setup-matlab@v2
 
       - name: Run demo (CPU)
-        run: matlab -batch "cd code; brain_tumor_segmentation_demo" 
+        run: matlab -batch "cd code; brain_tumor_segmentation_demo"
+
+      - name: Upload MATLAB log as artifact
+        if: always() # Run this step even if the demo fails
+        uses: actions/upload-artifact@v3
+        with:
+          name: matlab-log
+          path: matlab.log # Assuming matlab.log is created in the root
+          if-no-files-found: ignore # Don't fail if log isn't created 
