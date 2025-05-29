@@ -1,0 +1,22 @@
+\chapter{Metodología y Desarrollo}
+
+\section{Datos y preprocesamiento}
+Se utilizaron subconjuntos de BRATS 2017 en formato NIfTI. Se aplicó:
+\begin{itemize}
+  \item Corte al cerebro y normalización z-score por modalidad.
+  \item División en bloques $128^3$ con \verb|blockedImage| de MATLAB.
+\end{itemize}
+
+\section{Arquitectura U-Net básica}
+Ruta de contracción y expansión con \textbf{skip connections}.
+Función de activación ReLU; se evaluó Leaky ReLU.
+
+\section{Función de pérdida}
+Entropía cruzada vs.\ Dice generalizada \cite{sudre2017generalizeddice}.
+Próxima a implementarse: Dice multiclase \cite{isensee2018brats}.
+
+\section{Aumento de datos}
+Rotaciones, flips y deformaciones elásticas 3-D.
+
+\section{Entrenamiento}
+200 épocas, lote 2, Adam ($10^{-4}$), \textit{early stopping}.

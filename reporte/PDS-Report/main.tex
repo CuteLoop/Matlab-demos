@@ -1,0 +1,65 @@
+\documentclass[12pt,oneside]{report}
+\usepackage[spanish,english]{babel}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{graphicx}
+\usepackage{float}
+\usepackage{amsmath,amssymb}
+\usepackage{enumitem}
+\usepackage{hyperref}
+\usepackage{geometry}
+\geometry{letterpaper,margin=2.5cm}
+\bibliographystyle{IEEEtran}
+
+\newcommand{\ProyectoTitulo}{\textbf{Explorando la Segmentación de Tumores Cerebrales con U-Net}}
+\newcommand{\Integrantes}{autor}
+\newcommand{\Carrera}{Ingeniería Biomédica}
+\newcommand{\Materia}{Procesamiento Digital de Señales}
+\newcommand{\Institucion}{TecNM – Campus Hermosillo}
+\newcommand{\Fecha}{29 de mayo de 2025}
+
+\begin{document}
+\selectlanguage{spanish}
+\begin{titlepage}
+    \centering
+    \vspace*{3cm}
+    {\Huge \ProyectoTitulo\par}
+    \vspace{2cm}
+    {\Large \Integrantes\par}
+    \vspace{1cm}
+    {\large Carrera: \Carrera\par}
+    {\large Materia: \Materia\par}
+    {\large Institución: \Institucion\par}
+    \vfill
+    {\large \Fecha\par}
+\end{titlepage}
+
+\begin{abstract}
+\selectlanguage{spanish}
+\noindent\textbf{Resumen}\\
+Se presenta una experiencia práctica empleando la arquitectura U-Net para la
+segmentación de tumores cerebrales, contrastando un tutorial básico,
+un ejemplo oficial de MATLAB 3-D U-Net y el artículo de referencia de
+Isensee \textit{et al.} (2018).\\[6pt]
+\textbf{Palabras clave:} segmentación, U-Net, MRI, Dice, Deep Learning.
+
+\vspace{1em}
+\selectlanguage{english}
+\noindent\textbf{Abstract}\\
+This report summarises hands-on work with a basic U-Net tutorial,
+MATLAB’s 3-D U-Net example and the BRATS 2017 contribution by
+Isensee \textit{et al.} (2018).\\[6pt]
+\textbf{Keywords:} segmentation, U-Net, MRI, Dice, Deep Learning.
+\end{abstract}
+
+\tableofcontents
+\clearpage
+\input{sections/intro}
+\input{sections/metodologia}
+\input{sections/resultados}
+\input{sections/conclusiones}
+
+\phantomsection
+\addcontentsline{toc}{chapter}{Referencias}
+\bibliography{bibliography}
+\end{document}

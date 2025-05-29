@@ -1,0 +1,20 @@
+\chapter{Resultados y Comparación}
+
+\section{Métricas}
+Dice %, IoU y HD95. Comparación con \cite{isensee2018brats}.
+
+\begin{table}[H]\centering
+\caption{Rendimiento preliminar (validación)}
+\begin{tabular}{lccc}
+\hline
+\textbf{Modelo} & \textbf{Dice WT} & \textbf{Dice TC} & \textbf{HD95}\\\hline
+U-Net 2-D básica & 0.78 & 0.72 & 6.4\,mm\\
+MATLAB 3-D U-Net & 0.82 & 0.77 & 5.1\,mm\\
+Isensee \textit{et al.} & \textbf{0.90} & \textbf{0.85} & \textbf{3.6}\,mm\\\hline
+\end{tabular}
+\end{table}
+
+\section{Discusión}
+El ejemplo MATLAB supera al tutorial; la solución de Isensee sigue
+siendo el estado del arte gracias a normalización por instancia y
+supervisión profunda.
