@@ -44,7 +44,7 @@ borderSize = [32 32 32]; % As per MathWorks example for this network
 net = load(fullfile(dataDir, "brainTumorSegmentation3DUnet_v2.mat"));
 net = net.net; % The network is stored in a struct field called 'net'
 
-bim = blockedImage(scanVolume, BlockSize=blockSize, BorderSize=borderSize, Padding="symmetric");
+bim = blockedImage(scanVolume, 'BlockSize', blockSize, 'BorderSize', borderSize, 'Padding', "symmetric");
 
 % Prepare for semanticseg
 % semanticseg expects a dlarray for input with 'SSCB' format (Spatial, Spatial, Channel, Batch)
@@ -54,7 +54,7 @@ bim = blockedImage(scanVolume, BlockSize=blockSize, BorderSize=borderSize, Paddi
 processBlock = @(blockStruct) {
     permutedBlock = permute(blockStruct.Data, [1 2 4 3]); % H, W, D -> H, W, 1, D (Channels, Batch for 2D-like slices)
     dlInput = dlarray(single(permutedBlock), 'SSCB');
-    segmentedBlock = semanticseg(dlInput, net, OutputFormat="narrow"); % Using "narrow" output format for labels
+    segmentedBlock = semanticseg(dlInput, net, 'OutputFormat', "narrow"); % Using "narrow" output format for labels
     % semanticseg returns labels as H x W x NumClasses x NumSlices
     % We need to extract the class with the highest score (argmax) and permute back
     [~, segmentedBlockMax] = max(extractdata(segmentedBlock), [], 3);
@@ -64,7 +64,7 @@ processBlock = @(blockStruct) {
 
 % Apply semantic segmentation using blockedImage
 % Note: batchSize = 1 is handled by processing each block individually. semanticseg itself can handle batches if prepared correctly.
-segmentedVolumeBIM = apply(bim, processBlock, BatchSize=1, PadPartialBlocks=true, OutputSizeMode="same", DisplayWaitbar=true);
+segmentedVolumeBIM = apply(bim, processBlock, 'BatchSize', 1, 'PadPartialBlocks', true, 'OutputSizeMode', "same", 'DisplayWaitbar', true);
 
 % Reconstruct the segmented volume
 segmentedVolume = reconstruct(segmentedVolumeBIM);
