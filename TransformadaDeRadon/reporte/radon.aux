@@ -3,30 +3,39 @@
 \providecommand\HyField@AuxAddToFields[1]{}
 \providecommand\HyField@AuxAddToCoFields[2]{}
 \citation{Radon1917}
-\@writefile{toc}{\contentsline {section}{\numberline {1}Introduction}{1}{section.1}\protected@file@percent }
-\@writefile{toc}{\contentsline {section}{\numberline {2}Theory of the Radon Transform}{1}{section.2}\protected@file@percent }
-\newlabel{eq:radon-def}{{1}{1}{Theory of the Radon Transform}{equation.2.1}{}}
-\@writefile{toc}{\contentsline {section}{\numberline {3}Analytic Experiments}{1}{section.3}\protected@file@percent }
-\@writefile{toc}{\contentsline {subsection}{\numberline {3.1}Radially symmetric Gaussian}{1}{subsection.3.1}\protected@file@percent }
-\@writefile{lof}{\contentsline {figure}{\numberline {1}{\ignorespaces Radially symmetric example.}}{2}{figure.caption.2}\protected@file@percent }
+\@writefile{toc}{\contentsline {section}{\numberline {1}Introducción}{1}{section.1}\protected@file@percent }
+\newlabel{sec:intro}{{1}{1}{Introducción}{section.1}{}}
+\@writefile{toc}{\contentsline {section}{\numberline {2}Teoría de la Transformada de Radon}{2}{section.2}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {2.1}Definición matemática}{2}{subsection.2.1}\protected@file@percent }
+\newlabel{eq:radon-def}{{1}{2}{Definición matemática}{equation.2.1}{}}
+\@writefile{toc}{\contentsline {section}{\numberline {3}Descripción general y aplicaciones}{2}{section.3}\protected@file@percent }
+\newlabel{sec:general}{{3}{2}{Descripción general y aplicaciones}{section.3}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {1}{\ignorespaces Esquema conceptual: la transformada de Radon asigna la función $f(x,y)$ en el plano a $Rf(\alpha ,s)$ en el espacio de rectas (ángulo $\alpha $, distancia $s$).}}{2}{figure.caption.2}\protected@file@percent }
 \providecommand*\caption@xref[2]{\@setref\relax\@undefined{#1}}
-\newlabel{fig:gaussian}{{1}{2}{Radially symmetric example}{figure.caption.2}{}}
-\@writefile{toc}{\contentsline {subsection}{\numberline {3.2}Asymmetric polynomial–Gaussian}{2}{subsection.3.2}\protected@file@percent }
-\@writefile{toc}{\contentsline {section}{\numberline {4}Discrete Radon Transform Experiments}{2}{section.4}\protected@file@percent }
-\@writefile{toc}{\contentsline {subsection}{\numberline {4.1}Binary disk phantom}{2}{subsection.4.1}\protected@file@percent }
-\@writefile{toc}{\contentsline {subsection}{\numberline {4.2}Shepp–Logan head phantom}{2}{subsection.4.2}\protected@file@percent }
-\@writefile{toc}{\contentsline {section}{\numberline {5}Biomedical Imaging Context}{2}{section.5}\protected@file@percent }
-\@writefile{toc}{\contentsline {subsection}{\numberline {5.1}From mathematics to CT scanners}{2}{subsection.5.1}\protected@file@percent }
-\@writefile{lof}{\contentsline {figure}{\numberline {2}{\ignorespaces Density maps of the asymmetric test function (left) and its Radon transform (right).}}{3}{figure.caption.3}\protected@file@percent }
-\newlabel{fig:asymmetric}{{2}{3}{Density maps of the asymmetric test function (left) and its Radon transform (right)}{figure.caption.3}{}}
-\@writefile{toc}{\contentsline {subsection}{\numberline {5.2}Impact and future directions}{3}{subsection.5.2}\protected@file@percent }
+\newlabel{fig:mapping}{{1}{2}{Esquema conceptual: la transformada de Radon asigna la función $f(x,y)$ en el plano a $Rf(\alpha ,s)$ en el espacio de rectas (ángulo $\alpha $, distancia $s$)}{figure.caption.2}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {2}{\ignorespaces Sinograma de la función indicadora de dos cuadrados (izq.\ la función, der.\ su Radon transformada).}}{3}{figure.caption.4}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {3.1}Visión intuitiva}{3}{subsection.3.1}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {3.2}Inversión}{4}{subsection.3.2}\protected@file@percent }
+\@writefile{toc}{\contentsline {section}{\numberline {4}Experimentos Analíticos}{4}{section.4}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {4.1}Gaussiana radial}{4}{subsection.4.1}\protected@file@percent }
+\@writefile{lof}{\contentsline {figure}{\numberline {3}{\ignorespaces Ejemplo radialmente simétrico.}}{4}{figure.caption.6}\protected@file@percent }
+\newlabel{fig:gaussian}{{3}{4}{Ejemplo radialmente simétrico}{figure.caption.6}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {4.2}Polinomio–gaussiana asimétrica}{4}{subsection.4.2}\protected@file@percent }
+\@writefile{lof}{\contentsline {figure}{\numberline {4}{\ignorespaces Función asimétrica (izq.) y su transformada (der.).}}{5}{figure.caption.7}\protected@file@percent }
+\newlabel{fig:asymmetric}{{4}{5}{Función asimétrica (izq.) y su transformada (der.)}{figure.caption.7}{}}
+\@writefile{toc}{\contentsline {section}{\numberline {5}Experimentos Discretos en MATLAB}{5}{section.5}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {5.1}Fantoma de disco}{5}{subsection.5.1}\protected@file@percent }
+\@writefile{lof}{\contentsline {figure}{\numberline {5}{\ignorespaces Simulación de CT de haz paralelo para un disco.}}{5}{figure.caption.8}\protected@file@percent }
+\newlabel{fig:disk}{{5}{5}{Simulación de CT de haz paralelo para un disco}{figure.caption.8}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {5.2}Fantoma de Shepp–Logan}{6}{subsection.5.2}\protected@file@percent }
+\@writefile{lof}{\contentsline {figure}{\numberline {6}{\ignorespaces Experimento con el fantoma de Shepp–Logan.}}{6}{figure.caption.9}\protected@file@percent }
+\newlabel{fig:phantom}{{6}{6}{Experimento con el fantoma de Shepp–Logan}{figure.caption.9}{}}
+\@writefile{toc}{\contentsline {section}{\numberline {6}Contexto en Imagen Biomédica}{6}{section.6}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {6.1}Del modelo al escáner}{6}{subsection.6.1}\protected@file@percent }
+\@writefile{lof}{\contentsline {figure}{\numberline {7}{\ignorespaces Vistas ortogonales de un volumen de ejemplo de MATLAB.}}{6}{figure.caption.10}\protected@file@percent }
+\newlabel{fig:mri}{{7}{6}{Vistas ortogonales de un volumen de ejemplo de MATLAB}{figure.caption.10}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {6.2}Más allá de la CT}{6}{subsection.6.2}\protected@file@percent }
 \bibcite{Radon1917}{1}
 \bibcite{CormackHounsfield}{2}
-\@writefile{lof}{\contentsline {figure}{\numberline {3}{\ignorespaces Parallel-beam CT simulation of a disk phantom.}}{4}{figure.caption.4}\protected@file@percent }
-\newlabel{fig:disk}{{3}{4}{Parallel-beam CT simulation of a disk phantom}{figure.caption.4}{}}
-\@writefile{lof}{\contentsline {figure}{\numberline {4}{\ignorespaces Shepp–Logan head phantom experiment.}}{4}{figure.caption.5}\protected@file@percent }
-\newlabel{fig:phantom}{{4}{4}{Shepp–Logan head phantom experiment}{figure.caption.5}{}}
-\@writefile{toc}{\contentsline {section}{\numberline {6}Conclusion}{4}{section.6}\protected@file@percent }
-\@writefile{lof}{\contentsline {figure}{\numberline {5}{\ignorespaces Orthogonal slices of MATLAB’s demo MRI data. Each axial slice can be reconstructed individually via the inverse Radon transform when acquired in projection space.}}{5}{figure.caption.6}\protected@file@percent }
-\newlabel{fig:mri}{{5}{5}{Orthogonal slices of MATLAB’s demo MRI data. Each axial slice can be reconstructed individually via the inverse Radon transform when acquired in projection space}{figure.caption.6}{}}
-\gdef \@abspage@last{5}
+\@writefile{toc}{\contentsline {section}{\numberline {7}Conclusión}{7}{section.7}\protected@file@percent }
+\gdef \@abspage@last{7}

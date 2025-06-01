@@ -1,12 +1,16 @@
-\contentsline {section}{\numberline {1}Introduction}{1}{section.1}%
-\contentsline {section}{\numberline {2}Theory of the Radon Transform}{1}{section.2}%
-\contentsline {section}{\numberline {3}Analytic Experiments}{1}{section.3}%
-\contentsline {subsection}{\numberline {3.1}Radially symmetric Gaussian}{1}{subsection.3.1}%
-\contentsline {subsection}{\numberline {3.2}Asymmetric polynomial–Gaussian}{2}{subsection.3.2}%
-\contentsline {section}{\numberline {4}Discrete Radon Transform Experiments}{2}{section.4}%
-\contentsline {subsection}{\numberline {4.1}Binary disk phantom}{2}{subsection.4.1}%
-\contentsline {subsection}{\numberline {4.2}Shepp–Logan head phantom}{2}{subsection.4.2}%
-\contentsline {section}{\numberline {5}Biomedical Imaging Context}{2}{section.5}%
-\contentsline {subsection}{\numberline {5.1}From mathematics to CT scanners}{2}{subsection.5.1}%
-\contentsline {subsection}{\numberline {5.2}Impact and future directions}{3}{subsection.5.2}%
-\contentsline {section}{\numberline {6}Conclusion}{4}{section.6}%
+\contentsline {section}{\numberline {1}Introducción}{1}{section.1}%
+\contentsline {section}{\numberline {2}Teoría de la Transformada de Radon}{2}{section.2}%
+\contentsline {subsection}{\numberline {2.1}Definición matemática}{2}{subsection.2.1}%
+\contentsline {section}{\numberline {3}Descripción general y aplicaciones}{2}{section.3}%
+\contentsline {subsection}{\numberline {3.1}Visión intuitiva}{3}{subsection.3.1}%
+\contentsline {subsection}{\numberline {3.2}Inversión}{4}{subsection.3.2}%
+\contentsline {section}{\numberline {4}Experimentos Analíticos}{4}{section.4}%
+\contentsline {subsection}{\numberline {4.1}Gaussiana radial}{4}{subsection.4.1}%
+\contentsline {subsection}{\numberline {4.2}Polinomio–gaussiana asimétrica}{4}{subsection.4.2}%
+\contentsline {section}{\numberline {5}Experimentos Discretos en MATLAB}{5}{section.5}%
+\contentsline {subsection}{\numberline {5.1}Fantoma de disco}{5}{subsection.5.1}%
+\contentsline {subsection}{\numberline {5.2}Fantoma de Shepp–Logan}{6}{subsection.5.2}%
+\contentsline {section}{\numberline {6}Contexto en Imagen Biomédica}{6}{section.6}%
+\contentsline {subsection}{\numberline {6.1}Del modelo al escáner}{6}{subsection.6.1}%
+\contentsline {subsection}{\numberline {6.2}Más allá de la CT}{6}{subsection.6.2}%
+\contentsline {section}{\numberline {7}Conclusión}{7}{section.7}%

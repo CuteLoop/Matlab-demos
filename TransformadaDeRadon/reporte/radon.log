@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.25 (MiKTeX 24.1) (preloaded format=pdflatex 2024.7.19)  31 MAY 2025 09:57
+This is pdfTeX, Version 3.141592653-2.6-1.40.25 (MiKTeX 24.1) (preloaded format=pdflatex 2024.7.19)  31 MAY 2025 18:32
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -305,8 +305,17 @@ Package caption Info: New subtype `subfigure' on input line 238.
 \c@subfigure=\count304
 Package caption Info: New subtype `subtable' on input line 238.
 \c@subtable=\count305
+) (C:\Users\joela\AppData\Local\Programs\MiKTeX\tex/latex/float\float.sty
+Package: float 2001/11/08 v1.3d Float enhancements (AL)
+\c@float@type=\count306
+\float@exts=\toks25
+\float@box=\box63
+\@float@everytoks=\toks26
+\@floatcapt=\box64
+) (C:\Users\joela\AppData\Local\Programs\MiKTeX\tex/latex/placeins\placeins.sty
+Package: placeins 2005/04/18  v 2.2
 )
-Package translations Info: No language package found. I am going to use `english' as default language. on input line 17.
+Package translations Info: No language package found. I am going to use `english' as default language. on input line 20.
  (C:\Users\joela\AppData\Local\Programs\MiKTeX\tex/latex/graphics\color.sty
 Package: color 2022/01/06 v1.3d Standard LaTeX Color (DPC)
  (C:\Users\joela\AppData\Local\Programs\MiKTeX\tex/latex/graphics-cfg\color.cfg
@@ -315,30 +324,30 @@ File: color.cfg 2016/01/02 v1.6 sample color configuration
 Package color Info: Driver file: pdftex.def on input line 149.
  (C:\Users\joela\AppData\Local\Programs\MiKTeX\tex/latex/graphics\mathcolor.ltx)) (C:\Users\joela\AppData\Local\Programs\MiKTeX\tex/latex/l3backend\l3backend-pdftex.def
 File: l3backend-pdftex.def 2024-01-04 L3 backend support: PDF output (pdfTeX)
-\l__color_backend_stack_int=\count306
-\l__pdf_internal_box=\box63
-)
-No file radon.aux.
+\l__color_backend_stack_int=\count307
+\l__pdf_internal_box=\box65
+) (radon.aux)
 \openout1 = `radon.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 17.
-LaTeX Font Info:    ... okay on input line 17.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 17.
-LaTeX Font Info:    ... okay on input line 17.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 17.
-LaTeX Font Info:    ... okay on input line 17.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 17.
-LaTeX Font Info:    ... okay on input line 17.
-LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 17.
-LaTeX Font Info:    ... okay on input line 17.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 17.
-LaTeX Font Info:    ... okay on input line 17.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 17.
-LaTeX Font Info:    ... okay on input line 17.
-LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 17.
-LaTeX Font Info:    ... okay on input line 17.
-LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 17.
-LaTeX Font Info:    ... okay on input line 17.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 20.
+LaTeX Font Info:    ... okay on input line 20.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 20.
+LaTeX Font Info:    ... okay on input line 20.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 20.
+LaTeX Font Info:    ... okay on input line 20.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 20.
+LaTeX Font Info:    ... okay on input line 20.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 20.
+LaTeX Font Info:    ... okay on input line 20.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 20.
+LaTeX Font Info:    ... okay on input line 20.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 20.
+LaTeX Font Info:    ... okay on input line 20.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 20.
+LaTeX Font Info:    ... okay on input line 20.
+LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 20.
+LaTeX Font Info:    ... okay on input line 20.
+
 *geometry* driver: auto-detecting
 *geometry* detected driver: pdftex
 *geometry* verbose mode - [ preamble ] result:
@@ -376,266 +385,141 @@ LaTeX Font Info:    ... okay on input line 17.
 (C:\Users\joela\AppData\Local\Programs\MiKTeX\tex/latex/translations/dicts\translations-basic-dictionary-english.trsl
 File: translations-basic-dictionary-english.trsl (english translation file `translations-basic-dictionary')
 )
-Package translations Info: loading dictionary `translations-basic-dictionary' for `english'. on input line 17.
+Package translations Info: loading dictionary `translations-basic-dictionary' for `english'. on input line 20.
  (C:\Users\joela\AppData\Local\Programs\MiKTeX\tex/context/base/mkii\supp-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
-\scratchcounter=\count307
+\scratchcounter=\count308
 \scratchdimen=\dimen179
-\scratchbox=\box64
-\nofMPsegments=\count308
-\nofMParguments=\count309
-\everyMPshowfont=\toks25
-\MPscratchCnt=\count310
+\scratchbox=\box66
+\nofMPsegments=\count309
+\nofMParguments=\count310
+\everyMPshowfont=\toks27
+\MPscratchCnt=\count311
 \MPscratchDim=\dimen180
-\MPnumerator=\count311
-\makeMPintoPDFobject=\count312
-\everyMPtoPDFconversion=\toks26
+\MPnumerator=\count312
+\makeMPintoPDFobject=\count313
+\everyMPtoPDFconversion=\toks28
 ) (C:\Users\joela\AppData\Local\Programs\MiKTeX\tex/latex/epstopdf-pkg\epstopdf-base.sty
 Package: epstopdf-base 2020-01-24 v2.11 Base part for package epstopdf
 Package epstopdf-base Info: Redefining graphics rule for `.eps' on input line 485.
  (C:\Users\joela\AppData\Local\Programs\MiKTeX\tex/latex/00miktex\epstopdf-sys.cfg
 File: epstopdf-sys.cfg 2021/03/18 v2.0 Configuration of epstopdf for MiKTeX
 ))
-Package hyperref Info: Link coloring OFF on input line 17.
+Package hyperref Info: Link coloring OFF on input line 20.
+ (radon.out) (radon.out)
 \@outlinefile=\write3
 \openout3 = `radon.out'.
 
 Package caption Info: Begin \AtBeginDocument code.
+Package caption Info: float package is loaded.
 Package caption Info: End \AtBeginDocument code.
-LaTeX Font Info:    Trying to load font information for U+msa on input line 19.
+LaTeX Font Info:    Trying to load font information for U+msa on input line 22.
  (C:\Users\joela\AppData\Local\Programs\MiKTeX\tex/latex/amsfonts\umsa.fd
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 )
-LaTeX Font Info:    Trying to load font information for U+msb on input line 19.
+LaTeX Font Info:    Trying to load font information for U+msb on input line 22.
  (C:\Users\joela\AppData\Local\Programs\MiKTeX\tex/latex/amsfonts\umsb.fd
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
-)
-No file radon.toc.
+) (radon.toc)
 \tf@toc=\write4
 \openout4 = `radon.toc'.
 
 
-LaTeX Warning: Citation `Radon1917' on page 1 undefined on input line 39.
-
-
-LaTeX Warning: Reference `fig:gaussian' on page 1 undefined on input line 80.
-
-
-LaTeX Warning: File `gaussian_surface.png' not found on input line 86.
-
-
-c:/Users/joela/OneDrive/Documents/GitHub/BrainTumorDetection-Matlab/TransformadaDeRadon/reporte/radon.tex:86: Package pdftex.def Error: File `gaussian_surface.png' not found: using draft setting.
-
-See the pdftex.def package documentation for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.86 ...cs[width=\linewidth]{gaussian_surface.png}
-                                                  
-Try typing  <return>  to proceed.
-If that doesn't work, type  X <return>  to quit.
-
-
-LaTeX Warning: File `gaussian_radon.png' not found on input line 91.
-
-
-c:/Users/joela/OneDrive/Documents/GitHub/BrainTumorDetection-Matlab/TransformadaDeRadon/reporte/radon.tex:91: Package pdftex.def Error: File `gaussian_radon.png' not found: using draft setting.
-
-See the pdftex.def package documentation for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.91 ...hics[width=\linewidth]{gaussian_radon.png}
-                                                  
-Try typing  <return>  to proceed.
-If that doesn't work, type  X <return>  to quit.
-
-
-LaTeX Warning: `h' float specifier changed to `ht'.
-
-
-LaTeX Warning: Reference `fig:asymmetric' on page 1 undefined on input line 104.
+Overfull \hbox (17.76099pt too wide) in paragraph at lines 39--45
+\OT1/cmr/m/n/10.95 transver-sales de la anatom^^S^^Pa in-terna a par-tir de me-di-das de aten-uaci^^Son de rayos X. Matem^^Saticamente
+ []
 
 [1
 
 {C:/Users/joela/AppData/Local/MiKTeX/fonts/map/pdftex/pdftex.map}]
-
-LaTeX Warning: File `asymmetric_function_and_radon.png' not found on input line 109.
-
-
-c:/Users/joela/OneDrive/Documents/GitHub/BrainTumorDetection-Matlab/TransformadaDeRadon/reporte/radon.tex:109: Package pdftex.def Error: File `asymmetric_function_and_radon.png' not found: using draft setting.
-
-See the pdftex.def package documentation for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.109 ...width]{asymmetric_function_and_radon.png}
-                                                  
-Try typing  <return>  to proceed.
-If that doesn't work, type  X <return>  to quit.
-
-
-LaTeX Warning: `h' float specifier changed to `ht'.
-
-
-LaTeX Warning: Reference `fig:disk' on page 2 undefined on input line 122.
-
-
-LaTeX Warning: File `disk_original.png' not found on input line 129.
-
-
-c:/Users/joela/OneDrive/Documents/GitHub/BrainTumorDetection-Matlab/TransformadaDeRadon/reporte/radon.tex:129: Package pdftex.def Error: File `disk_original.png' not found: using draft setting.
-
-See the pdftex.def package documentation for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.129 ...hics[width=\linewidth]{disk_original.png}
-                                                  
-Try typing  <return>  to proceed.
-If that doesn't work, type  X <return>  to quit.
-
-
-LaTeX Warning: File `disk_sinogram.png' not found on input line 134.
-
-
-c:/Users/joela/OneDrive/Documents/GitHub/BrainTumorDetection-Matlab/TransformadaDeRadon/reporte/radon.tex:134: Package pdftex.def Error: File `disk_sinogram.png' not found: using draft setting.
-
-See the pdftex.def package documentation for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.134 ...hics[width=\linewidth]{disk_sinogram.png}
-                                                  
-Try typing  <return>  to proceed.
-If that doesn't work, type  X <return>  to quit.
-
-
-LaTeX Warning: File `disk_reconstruction.png' not found on input line 139.
-
-
-c:/Users/joela/OneDrive/Documents/GitHub/BrainTumorDetection-Matlab/TransformadaDeRadon/reporte/radon.tex:139: Package pdftex.def Error: File `disk_reconstruction.png' not found: using draft setting.
-
-See the pdftex.def package documentation for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.139 ...idth=\linewidth]{disk_reconstruction.png}
-                                                  
-Try typing  <return>  to proceed.
-If that doesn't work, type  X <return>  to quit.
-
-
-LaTeX Warning: `h' float specifier changed to `ht'.
-
-
-LaTeX Warning: Reference `fig:phantom' on page 2 undefined on input line 150.
-
-
-LaTeX Warning: File `phantom_original.png' not found on input line 157.
-
-
-c:/Users/joela/OneDrive/Documents/GitHub/BrainTumorDetection-Matlab/TransformadaDeRadon/reporte/radon.tex:157: Package pdftex.def Error: File `phantom_original.png' not found: using draft setting.
-
-See the pdftex.def package documentation for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.157 ...s[width=\linewidth]{phantom_original.png}
-                                                  
-Try typing  <return>  to proceed.
-If that doesn't work, type  X <return>  to quit.
-
-
-LaTeX Warning: File `phantom_sinogram.png' not found on input line 162.
-
-
-c:/Users/joela/OneDrive/Documents/GitHub/BrainTumorDetection-Matlab/TransformadaDeRadon/reporte/radon.tex:162: Package pdftex.def Error: File `phantom_sinogram.png' not found: using draft setting.
-
-See the pdftex.def package documentation for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.162 ...s[width=\linewidth]{phantom_sinogram.png}
-                                                  
-Try typing  <return>  to proceed.
-If that doesn't work, type  X <return>  to quit.
-
-
-LaTeX Warning: File `phantom_reconstruction.png' not found on input line 167.
-
-
-c:/Users/joela/OneDrive/Documents/GitHub/BrainTumorDetection-Matlab/TransformadaDeRadon/reporte/radon.tex:167: Package pdftex.def Error: File `phantom_reconstruction.png' not found: using draft setting.
-
-See the pdftex.def package documentation for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.167 ...h=\linewidth]{phantom_reconstruction.png}
-                                                  
-Try typing  <return>  to proceed.
-If that doesn't work, type  X <return>  to quit.
-
-
-LaTeX Warning: `h' float specifier changed to `ht'.
-
-
-LaTeX Warning: Reference `eq:radon-def' on page 2 undefined on input line 182.
-
-
-LaTeX Warning: Reference `fig:mri' on page 2 undefined on input line 183.
-
-
-LaTeX Warning: File `mri_volume.png' not found on input line 188.
-
-
-c:/Users/joela/OneDrive/Documents/GitHub/BrainTumorDetection-Matlab/TransformadaDeRadon/reporte/radon.tex:188: Package pdftex.def Error: File `mri_volume.png' not found: using draft setting.
-
-See the pdftex.def package documentation for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.188 ...hics[width=0.6\textwidth]{mri_volume.png}
-                                                  
-Try typing  <return>  to proceed.
-If that doesn't work, type  X <return>  to quit.
-
-
-LaTeX Warning: `h' float specifier changed to `ht'.
-
-[2] [3{C:/Users/joela/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/cm-super/cm-super-ts1.enc}] [4] [5] (radon.aux)
+<../figures/Radon_transform.png, id=96, 69.861pt x 61.9113pt>
+File: ../figures/Radon_transform.png Graphic file (type png)
+<use ../figures/Radon_transform.png>
+Package pdftex.def Info: ../figures/Radon_transform.png  used on input line 71.
+(pdftex.def)             Requested size: 249.13371pt x 220.78796pt.
+<../figures/Sinogram_-_Two_Square_Indicator_Phantom.svg.png, id=99, 1027.84pt x 775.89874pt>
+File: ../figures/Sinogram_-_Two_Square_Indicator_Phantom.svg.png Graphic file (type png)
+<use ../figures/Sinogram_-_Two_Square_Indicator_Phantom.svg.png>
+Package pdftex.def Info: ../figures/Sinogram_-_Two_Square_Indicator_Phantom.svg.png  used on input line 96.
+(pdftex.def)             Requested size: 212.89546pt x 160.70592pt.
+<../figures/Sinogram_Source_-_Two_Squares_Phantom.svg.png, id=100, 501.875pt x 501.875pt>
+File: ../figures/Sinogram_Source_-_Two_Squares_Phantom.svg.png Graphic file (type png)
+<use ../figures/Sinogram_Source_-_Two_Squares_Phantom.svg.png>
+Package pdftex.def Info: ../figures/Sinogram_Source_-_Two_Squares_Phantom.svg.png  used on input line 100.
+(pdftex.def)             Requested size: 212.89546pt x 212.89966pt.
+ [2 <../figures/Radon_transform.png>] [3{C:/Users/joela/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/cm-super/cm-super-ts1.enc} <../figures/Sinogram_-_Two_Square_Indicator_Phantom.svg.png> <../figures/Sinogram_Source_-_Two_Squares_Phantom.svg.png>]
+<../figures/gaussian_surface.png, id=125, 362.0727pt x 286.4301pt>
+File: ../figures/gaussian_surface.png Graphic file (type png)
+<use ../figures/gaussian_surface.png>
+Package pdftex.def Info: ../figures/gaussian_surface.png  used on input line 174.
+(pdftex.def)             Requested size: 212.89546pt x 168.41974pt.
+<../figures/gaussian_radon.png, id=126, 347.6187pt x 302.0886pt>
+File: ../figures/gaussian_radon.png Graphic file (type png)
+<use ../figures/gaussian_radon.png>
+Package pdftex.def Info: ../figures/gaussian_radon.png  used on input line 178.
+(pdftex.def)             Requested size: 212.89546pt x 185.01128pt.
+<../figures/asymmetric_function_and_radon.png, id=128, 327.624pt x 269.3262pt>
+File: ../figures/asymmetric_function_and_radon.png Graphic file (type png)
+<use ../figures/asymmetric_function_and_radon.png>
+Package pdftex.def Info: ../figures/asymmetric_function_and_radon.png  used on input line 195.
+(pdftex.def)             Requested size: 452.9679pt x 372.39796pt.
+ [4 <../figures/gaussian_surface.png (PNG copy)> <../figures/gaussian_radon.png (PNG copy)>]
+<../figures/disk_original.png, id=139, 258.4857pt x 269.3262pt>
+File: ../figures/disk_original.png Graphic file (type png)
+<use ../figures/disk_original.png>
+Package pdftex.def Info: ../figures/disk_original.png  used on input line 212.
+(pdftex.def)             Requested size: 135.89174pt x 141.58742pt.
+<../figures/disk_sinogram.png, id=140, 362.7954pt x 297.7524pt>
+File: ../figures/disk_sinogram.png Graphic file (type png)
+<use ../figures/disk_sinogram.png>
+Package pdftex.def Info: ../figures/disk_sinogram.png  used on input line 216.
+(pdftex.def)             Requested size: 154.00742pt x 126.39998pt.
+<../figures/disk_reconstruction.png, id=141, 258.4857pt x 269.3262pt>
+File: ../figures/disk_reconstruction.png Graphic file (type png)
+<use ../figures/disk_reconstruction.png>
+Package pdftex.def Info: ../figures/disk_reconstruction.png  used on input line 220.
+(pdftex.def)             Requested size: 135.89174pt x 141.58742pt.
+<../figures/phantom_original.png, id=143, 258.4857pt x 269.3262pt>
+File: ../figures/phantom_original.png Graphic file (type png)
+<use ../figures/phantom_original.png>
+Package pdftex.def Info: ../figures/phantom_original.png  used on input line 236.
+(pdftex.def)             Requested size: 135.89174pt x 141.58742pt.
+<../figures/phantom_sinogram.png, id=144, 362.7954pt x 297.7524pt>
+File: ../figures/phantom_sinogram.png Graphic file (type png)
+<use ../figures/phantom_sinogram.png>
+Package pdftex.def Info: ../figures/phantom_sinogram.png  used on input line 240.
+(pdftex.def)             Requested size: 154.00742pt x 126.39998pt.
+<../figures/phantom_reconstruction.png, id=145, 258.4857pt x 269.3262pt>
+File: ../figures/phantom_reconstruction.png Graphic file (type png)
+<use ../figures/phantom_reconstruction.png>
+Package pdftex.def Info: ../figures/phantom_reconstruction.png  used on input line 244.
+(pdftex.def)             Requested size: 135.89174pt x 141.58742pt.
+ [5 <../figures/asymmetric_function_and_radon.png (PNG copy)> <../figures/disk_original.png (PNG copy)> <../figures/disk_sinogram.png (PNG copy)> <../figures/disk_reconstruction.png (PNG copy)>]
+<../figures/mri_volume.png, id=153, 327.624pt x 191.2746pt>
+File: ../figures/mri_volume.png Graphic file (type png)
+<use ../figures/mri_volume.png>
+Package pdftex.def Info: ../figures/mri_volume.png  used on input line 265.
+(pdftex.def)             Requested size: 308.01485pt x 179.8419pt.
+ [6 <../figures/phantom_original.png (PNG copy)> <../figures/phantom_sinogram.png (PNG copy)> <../figures/phantom_reconstruction.png (PNG copy)> <../figures/mri_volume.png (PNG copy)>] [7] (radon.aux)
  ***********
 LaTeX2e <2023-11-01> patch level 1
 L3 programming layer <2024-01-04>
  ***********
-
-
-LaTeX Warning: There were undefined references.
-
-
-LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
-
-
-Package rerunfilecheck Warning: File `radon.out' has changed.
-(rerunfilecheck)                Rerun to get outlines right
-(rerunfilecheck)                or use package `bookmark'.
-
-Package rerunfilecheck Info: Checksums for `radon.out':
-(rerunfilecheck)             Before: <no file>
-(rerunfilecheck)             After:  27BFBADDBB98BABF0CDEB3FDD8884CE7;2141.
+Package rerunfilecheck Info: File `radon.out' has not changed.
+(rerunfilecheck)             Checksum: F20FA1F644AC72D76A8342A2F2242E79;2664.
  ) 
 Here is how much of TeX's memory you used:
- 15839 strings out of 474486
- 316379 string characters out of 5743755
+ 15764 strings out of 474486
+ 313563 string characters out of 5743755
  1940542 words of memory out of 5000000
- 37949 multiletter control sequences out of 15000+600000
- 568643 words of font info for 77 fonts, out of 8000000 for 9000
+ 37848 multiletter control sequences out of 15000+600000
+ 568989 words of font info for 78 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 75i,7n,80p,412b,1099s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ 75i,8n,80p,410b,1054s stack positions out of 10000i,1000n,20000p,200000b,200000s
 <C:/Users/joela/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmbx10.pfb><C:/Users/joela/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmbx12.pfb><C:/Users/joela/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmex10.pfb><C:/Users/joela/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi10.pfb><C:/Users/joela/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi8.pfb><C:/Users/joela/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr10.pfb><C:/Users/joela/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr12.pfb><C:/Users/joela/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr17.pfb><C:/Users/joela/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr6.pfb><C:/Users/joela/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr8.pfb><C:/Users/joela/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy10.pfb><C:/Users/joela/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy8.pfb><C:/Users/joela/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmti10.pfb><C:/Users/joela/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmtt10.pfb><C:/Users/joela/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/symbols/msbm10.pfb><C:/Users/joela/AppData/Local/Programs/MiKTeX/fonts/type1/public/cm-super/sfrm1095.pfb>
-Output written on radon.pdf (5 pages, 206918 bytes).
+Output written on radon.pdf (7 pages, 1237791 bytes).
 PDF statistics:
- 135 PDF objects out of 1000 (max. 8388607)
- 28 named destinations out of 1000 (max. 500000)
- 1 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 246 PDF objects out of 1000 (max. 8388607)
+ 38 named destinations out of 1000 (max. 500000)
+ 194 words of extra memory for PDF output out of 10000 (max. 10000000)
 

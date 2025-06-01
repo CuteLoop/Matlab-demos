@@ -7,225 +7,246 @@
 \usepackage{hyperref}
 \usepackage{caption}
 \usepackage{subcaption}
+\usepackage{float}
+\usepackage{placeins}
 
-\title{Seeing Inside:  The Radon Transform, MATLAB Experiments,\\
-       and Biomedical Imaging Applications}
-\author{autor\\
-        PhD Student, Biomedical Engineering}
+\title{Mirar por Dentro:\\
+       La Transformada de Radon, Experimentos en MATLAB\\
+       y Aplicaciones en Imagen Biomédica}
+\author{Autor\\
+        Estudiante de Ingeniería Biomédica}
 \date{\today}
 
 \begin{document}
 \maketitle
 
 \begin{abstract}
-The Radon transform links pure mathematics with life--saving medical
-technology.  This report introduces the transform, demonstrates analytic
-and numerical examples in MATLAB, and explains how filtered
-back-projection underpins modern computed tomography (CT).
-All experiments and figures were produced with a MATLAB Live Script;
-figure file names are indicated for reproducibility.
+La transformada de Radon enlaza matemáticas elegantes con tecnología
+médica que salva vidas.  Este informe presenta su definición, ilustra
+demostraciones analíticas y numéricas realizadas en MATLAB y explica
+cómo la \emph{retroproyección filtrada} sustenta la tomografía
+computarizada (CT) moderna.  Todas las figuras se generaron mediante un
+Live Script y se guardaron con los nombres citados para garantizar la
+reproducibilidad.
 \end{abstract}
 
 \tableofcontents
 \bigskip
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{Introducción}
+
+La tomografía computarizada revolucionó la radiología diagnóstica al
+permitir reconstruir cortes transversales de la anatomía interna a
+partir de medidas de atenuación de rayos X.  Matemáticamente estas
+integrales de línea constituyen la \emph{transformada de Radon},
+introducida por Johann Radon en 1917 \cite{Radon1917}.  Su inversión y
+realización numérica eficiente son el núcleo de todo escáner CT moderno.
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\section{Introduction}
+\section{Teoría de la Transformada de Radon}
 
-Computed tomography (CT) revolutionised diagnostic radiology by allowing
-physicians to reconstruct cross-sectional images of internal anatomy
-from line–integral measurements of X-ray attenuation.
-Mathematically, these line integrals form the \emph{Radon transform},
-introduced by Johann Radon in 1917 \cite{Radon1917}.  
-This report summarises the theory, reproduces textbook examples, and
-documents hands-on MATLAB explorations relevant to biomedical
-engineering practice.
+\subsection{Definición matemática}
 
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\section{Theory of the Radon Transform}
-
-For a function \( f(x,y) \) on \( \mathbb R^{2} \),
-its Radon transform \( \mathcal R f \) is the set of line
-integrals
+Para una función $f(x,y)$ definida en $\mathbb R^{2}$, su transformada
+de Radon $\mathcal Rf$ es el conjunto de integrales a lo largo de
+rectas:
 \begin{equation}
-  \bigl(\mathcal R f\bigr)(p,\varphi)
-  \;=\;
-  \int_{-\infty}^{\infty}
-    f\!\bigl(p\cos\varphi - s\sin\varphi,\;
-             p\sin\varphi + s\cos\varphi\bigr)\; \mathrm ds,
+  (\mathcal R f)(p,\varphi)
+  =
+    \int_{-\infty}^{\infty}
+      f\!\bigl(p\cos\varphi - s\sin\varphi,\;
+               p\sin\varphi + s\cos\varphi\bigr)\,\mathrm ds,
   \label{eq:radon-def}
 \end{equation}
-where \( p \) is the signed distance of the line from the origin and
-\( \varphi \) is the angle the line’s normal makes with the \(x\)-axis.
-Recovering \(f\) from \( \mathcal R f \) is the \emph{inverse Radon
-transform}.  The Fourier Slice Theorem shows that a 1-D inverse Fourier
-transform of each projection, followed by a 2-D inverse transform,
-re-creates \(f\).  Numerically this leads to
-\emph{filtered back-projection} (FBP), implemented in MATLAB as
-\texttt{iradon}.
+donde $p$ es la distancia perpendicular de la recta al origen y
+$\varphi$ el ángulo que forma la normal con el eje $x$.
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\section{Analytic Experiments}
+\section{Descripción general y aplicaciones}\label{sec:general}
 
-\subsection{Radially symmetric Gaussian}
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.55\textwidth]{figures/Radon_transform.png}
+\caption{Esquema conceptual de la asignación $f(x,y)\,\rightarrow\,Rf(\alpha,s)$.}
+\label{fig:mapping}
+\end{figure}
+\FloatBarrier
 
-Using the Symbolic Math Toolbox we verified that a centred Gaussian
-\[
-  f(x,y)=\exp\!\bigl(-(x^{2}+y^{2})\bigr)
-\]
-has a Radon transform independent of \( \varphi \):
-\(
-  (\mathcal R f)(p,\varphi)=\sqrt{\pi}\,\exp(-p^{2})
-\).
-Figure~\ref{fig:gaussian} juxtaposes the surface plot of \(f\) and the
-graph of its transform.
+En términos sencillos, la transformada de Radon toma una función
+$f(x,y)$ (por ejemplo, la densidad desconocida de un objeto) y genera
+otra función $Rf(\alpha,s)$ cuyos valores son integrales de línea de $f$
+a lo largo de todas las rectas del plano.  Dicho de otro modo, captura
+la “masa” contenida en cada rayo definido por el par $(\alpha,s)$.
 
-\begin{figure}[h]
+\subsection*{Sinogramas}
+
+La representación gráfica de $Rf$ recibe el nombre de
+\emph{sinograma}.  Un punto fuera del centro produce una traza
+sinusoidal; la superposición de varios objetos se plasma como un bosque
+de senos borrosos con distinta fase y amplitud.
+
+\begin{figure}[H]
 \centering
 \begin{subfigure}[b]{0.47\textwidth}
-  \includegraphics[width=\linewidth]{gaussian_surface.png}
-  \caption{3-D surface of \(f\).}
-\end{subfigure}
-\hfill
+  \includegraphics[width=\linewidth]{figures/Sinogram_-_Two_Square_Indicator_Phantom.svg.png}
+  \caption{}
+\end{subfigure}\hfill
 \begin{subfigure}[b]{0.47\textwidth}
-  \includegraphics[width=\linewidth]{gaussian_radon.png}
-  \caption{Radon transform vs.\ \(p\).}
+  \includegraphics[width=\linewidth]{figures/Sinogram_Source_-_Two_Squares_Phantom.svg.png}
+  \caption{}
 \end{subfigure}
-\caption{Radially symmetric example.}
-\label{fig:gaussian}
+\caption{Sinograma obtenido a partir de la función indicadora de dos cuadrados.}
 \end{figure}
+\FloatBarrier
 
-\subsection{Asymmetric polynomial–Gaussian}
+Las aristas paralelas refuerzan la señal cuando se alinean con la
+dirección de proyección, fenómeno que se aprecia claramente en el caso
+de los dos cuadrados.
 
-Replacing the integrand by
-\( g(x,y)=(x^{2}+3y^{2})e^{-(x^{2}+y^{2})} \)
-breaks the circular symmetry; the resulting transform depends on
-both \(p\) and \(\varphi\) (analytical expression omitted for brevity).
-Figure~\ref{fig:asymmetric} shows density plots of \(g\) and
-\(\mathcal Rg\).
+\subsection*{Ámbitos de uso}
 
-\begin{figure}[h]
-\centering
-\includegraphics[width=\textwidth]{asymmetric_function_and_radon.png}
-\caption{Density maps of the asymmetric test function (left) and its
-Radon transform (right).\label{fig:asymmetric}}
-\end{figure}
+La capacidad de reconstruir $f$ a partir de $Rf$ sustenta tecnologías
+muy diversas:
 
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\section{Discrete Radon Transform Experiments}
-
-All remaining experiments use MATLAB’s discrete \texttt{radon} and
-\texttt{iradon} functions.
-
-\subsection{Binary disk phantom}
-
-Figure~\ref{fig:disk} demonstrates how 180 projections of a simple disk
-(representing, e.g.\ a cross-section of an organ) produce a
-\emph{sinogram}, which FBP then reconstructs nearly perfectly.
-
-\begin{figure}[h]
-\centering
-\begin{subfigure}[b]{0.30\textwidth}
-  \includegraphics[width=\linewidth]{disk_original.png}
-  \caption{Original image.}
-\end{subfigure}
-\hfill
-\begin{subfigure}[b]{0.34\textwidth}
-  \includegraphics[width=\linewidth]{disk_sinogram.png}
-  \caption{Sinogram.}
-\end{subfigure}
-\hfill
-\begin{subfigure}[b]{0.30\textwidth}
-  \includegraphics[width=\linewidth]{disk_reconstruction.png}
-  \caption{FBP reconstruction.}
-\end{subfigure}
-\caption{Parallel-beam CT simulation of a disk phantom.}
-\label{fig:disk}
-\end{figure}
-
-\subsection{Shepp–Logan head phantom}
-
-The Shepp–Logan phantom is a synthetic yet realistic CT head slice.
-With $180$ projections we obtain the results in
-Figure~\ref{fig:phantom}.  
-Qualitatively the reconstruction captures fine structures such as the
-ventricles, illustrating clinical usefulness.
-
-\begin{figure}[h]
-\centering
-\begin{subfigure}[b]{0.30\textwidth}
-  \includegraphics[width=\linewidth]{phantom_original.png}
-  \caption{Ground truth.}
-\end{subfigure}
-\hfill
-\begin{subfigure}[b]{0.34\textwidth}
-  \includegraphics[width=\linewidth]{phantom_sinogram.png}
-  \caption{Sinogram.}
-\end{subfigure}
-\hfill
-\begin{subfigure}[b]{0.30\textwidth}
-  \includegraphics[width=\linewidth]{phantom_reconstruction.png}
-  \caption{Reconstruction.}
-\end{subfigure}
-\caption{Shepp–Logan head phantom experiment.}
-\label{fig:phantom}
-\end{figure}
-
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\section{Biomedical Imaging Context}
-
-\subsection{From mathematics to CT scanners}
-
-In practice, modern scanners collect fan- or cone-beam projections while
-rotating around the patient.  Proprietary reconstruction pipelines apply
-noise correction, calibration, and iterative or FBP algorithms.
-Nevertheless, Equation~\eqref{eq:radon-def} and its inversion remain the
-core.  Figure~\ref{fig:mri} uses MATLAB’s built-in \texttt{mri} volume
-to visualise slices akin to clinical data.
-
-\begin{figure}[h]
-\centering
-\includegraphics[width=0.6\textwidth]{mri_volume.png}
-\caption{Orthogonal slices of MATLAB’s demo MRI data.  Each axial slice
-can be reconstructed individually via the inverse Radon transform when
-acquired in projection space.\label{fig:mri}}
-\end{figure}
-
-\subsection{Impact and future directions}
-
-Beyond CT, Radon-type transforms appear in:
-\begin{itemize}\itemsep0.2em
-\item \textbf{Positron Emission Tomography (PET)}---employing coincident
-      $\gamma$-ray detection.
-\item \textbf{Optical projection tomography} for mesoscopic specimens.
-\item \textbf{Electron microscopy} tilt-series reconstruction.
-\item \textbf{Barcode decoding} (1-D Radon in scanners).
+\begin{itemize}\itemsep0.3em
+\item Tomografía computarizada (CT) y tomografía axial computarizada (CAT)
+\item PET y SPECT (medicina nuclear)
+\item Microscopía electrónica de partículas (virus, complejos proteicos)
+\item Tomografía óptica de proyección
+\item Exploración sísmica de reflexión
+\item Lectores de códigos de barras y QR (versión 1-D)
 \end{itemize}
 
-Emerging research combines deep learning with classical FBP to reduce
-radiation dose while preserving diagnostic quality.
+Todas comparten la misma idea: medir proyecciones desde múltiples
+direcciones y luego invertir la transformada para revelar la estructura
+interna.
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\section{Conclusion}
+\section{Experimentos Analíticos}
 
-Through analytic proofs and MATLAB simulations I gained intuition for
-how line integrals over an object encode its structure, and how inverse
-methods---especially filtered back-projection---turn those measurements
-into images that guide clinical decisions.  The Radon transform thus
-beautifully exemplifies the synergy between mathematics, computation,
-and biomedical engineering.
+\subsection{Gaussiana radial}
+
+Con \textit{Symbolic Math Toolbox} se verifica que
+$f(x,y)=e^{-(x^{2}+y^{2})}$ tiene transformada independiente de
+$\varphi$:
+$(\mathcal Rf)(p,\varphi)=\sqrt{\pi}\,e^{-p^{2}}$.
+
+\begin{figure}[H]
+\centering
+\begin{subfigure}[b]{0.47\textwidth}
+  \includegraphics[width=\linewidth]{figures/gaussian_surface.png}
+  \caption{Superficie 3-D de $f$.}
+\end{subfigure}\hfill
+\begin{subfigure}[b]{0.47\textwidth}
+  \includegraphics[width=\linewidth]{figures/gaussian_radon.png}
+  \caption{$\mathcal Rf$ frente a $p$.}
+\end{subfigure}
+\caption{Ejemplo radialmente simétrico.}
+\label{fig:gaussian}
+\end{figure}
+\FloatBarrier
+
+\subsection{Polinomio–gaussiana asimétrica}
+
+Para $g(x,y)=(x^{2}+3y^{2})e^{-(x^{2}+y^{2})}$ la simetría radial se
+rompe y la transformada depende de $p$ y $\varphi$.
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=\textwidth]{figures/asymmetric_function_and_radon.png}
+\caption{Función asimétrica (izquierda) y su transformada (derecha).}
+\label{fig:asymmetric}
+\end{figure}
+\FloatBarrier
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{Experimentos Discretos en MATLAB}
+
+\subsection{Fantoma de disco}
+
+\begin{figure}[H]
+\centering
+\begin{subfigure}[b]{0.30\textwidth}
+  \includegraphics[width=\linewidth]{figures/disk_original.png}
+  \caption{Imagen original.}
+\end{subfigure}\hfill
+\begin{subfigure}[b]{0.34\textwidth}
+  \includegraphics[width=\linewidth]{figures/disk_sinogram.png}
+  \caption{Sinograma.}
+\end{subfigure}\hfill
+\begin{subfigure}[b]{0.30\textwidth}
+  \includegraphics[width=\linewidth]{figures/disk_reconstruction.png}
+  \caption{Reconstrucción FBP.}
+\end{subfigure}
+\caption{Simulación de CT de haz paralelo para un disco.}
+\label{fig:disk}
+\end{figure}
+\FloatBarrier
+
+\subsection{Fantoma de Shepp–Logan}
+
+\begin{figure}[H]
+\centering
+\begin{subfigure}[b]{0.30\textwidth}
+  \includegraphics[width=\linewidth]{figures/phantom_original.png}
+  \caption{Corte original.}
+\end{subfigure}\hfill
+\begin{subfigure}[b]{0.34\textwidth}
+  \includegraphics[width=\linewidth]{figures/phantom_sinogram.png}
+  \caption{Sinograma.}
+\end{subfigure}\hfill
+\begin{subfigure}[b]{0.30\textwidth}
+  \includegraphics[width=\linewidth]{figures/phantom_reconstruction.png}
+  \caption{Reconstrucción.}
+\end{subfigure}
+\caption{Reconstrucción del fantoma de Shepp–Logan.}
+\label{fig:phantom}
+\end{figure}
+\FloatBarrier
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{Contexto en Imagen Biomédica}
+
+\subsection{Del modelo al escáner}
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.68\textwidth]{figures/mri_volume.png}
+\caption{Vistas ortogonales de un volumen de ejemplo incluido en MATLAB.}
+\label{fig:mri}
+\end{figure}
+\FloatBarrier
+
+\subsection{Más allá de la CT}
+
+Transformadas tipo Radon también se usan en PET, tomografía óptica,
+microscopía electrónica, reflexión sísmica y lectores de códigos de
+barras, entre otras aplicaciones.  Investigaciones recientes mezclan
+aprendizaje profundo con FBP para reducir la dosis de radiación sin
+mermar la calidad diagnóstica.
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{Conclusión}
+
+Las pruebas analíticas y numéricas demostraron cómo las integrales de
+línea codifican la estructura y cómo la retroproyección filtrada permite
+reconstruir imágenes que guían decisiones clínicas.  La transformada de
+Radon ejemplifica la sinergia entre geometría, análisis y computación
+aplicada a la salud.
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \begin{thebibliography}{9}
 \bibitem{Radon1917}
-J.~Radon, \emph{Über die Bestimmung von Funktionen durch ihre Integralwerte
-längs gewisser Mannigfaltigkeiten}, Ber.\ Sächs.\ Akad.\ Wiss.\ Leipzig,
-Math.-Phys.\ Kl.\ \textbf{69} (1917), 262–277.
+J.~Radon,
+\emph{Über die Bestimmung von Funktionen durch ihre Integralwerte
+längs gewisser Mannigfaltigkeiten},
+\textit{Ber.\ Sächs.\ Akad.\ Wiss.\ Leipzig, Math.-Phys.\ Kl.}
+\textbf{69} (1917), 262–277.
 
 \bibitem{CormackHounsfield}
-A.~Cormack and G.~N.~Hounsfield, \emph{Nobel Lectures in Physiology or Medicine
-1979}, Nobel Foundation, Stockholm, 1980.
-
+A.~M.~Cormack y G.~N.~Hounsfield,
+\emph{Nobel Lectures in Physiology or Medicine 1979},
+Nobel Foundation, Estocolmo, 1980.
 \end{thebibliography}
 
 \end{document}
